@@ -122,4 +122,4 @@ HYDROLASE/HYDROLASE INHIBITOR       0.59      0.51      0.55       516
 # Repo Outline
 	1) Jupyter Notebook: `SRajpara_Module5_Capstone_ProteinClassificationProject.ipynb'
 	2) Image Directory: `Module5_Capstone_ProteinClassificationProject/output/` 
-	3) Non-Technical Presentation: `Module5_Capstone_ProteinClassificationProject/output/SRajpara_Mod5_Presentation.pdf`
+	3) Non-Technical Presentation: `Module5_Capstone_ProteinClassificationProject/Module 5 Capstone Presentation.pdf`
