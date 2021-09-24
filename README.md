@@ -70,15 +70,17 @@ Deep learning project for protein classification.
 
 ### Conclusions
 - RNN LSTM model performed the best:
+
 ```
-model_4_top10 = Sequential()
-model_4_top10.add(Embedding(25, 10, input_length=285))
+model_6 = Sequential()
+model_6.add(Embedding(25, 10, input_length=285))
 
-model_4_top10.add(LSTM(25, return_sequences=True))
+model_6.add(LSTM(15, return_sequences=True))
 
-model_4_top10.add(Flatten())
-model_4_top10.add(Dense(285, activation='sigmoid'))
-model_4_top10.add(Dense(10, activation='softmax'))
+model_6.add(Dropout(0.5))
+model_6.add(Flatten())
+model_6.add(Dense(4275, activation='sigmoid'))
+model_6.add(Dense(10, activation='softmax'))
 
 
 early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_accuracy', 
@@ -88,12 +90,14 @@ early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_accuracy',
 
 opt = tf.keras.optimizers.Adam(learning_rate= 0.001)
 
-model_4_top10.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
+model_6.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
+
+model_6.summary()
 ```
 
-<img src= "https://raw.githubusercontent.com/seetarajpara/Module5_Capstone_ProteinClassificationProject/main/output/output_126_0.png" width=400>
-<img src= "https://raw.githubusercontent.com/seetarajpara/Module5_Capstone_ProteinClassificationProject/main/output/output_126_1.png" width=400>
-<img src= "https://raw.githubusercontent.com/seetarajpara/Module5_Capstone_ProteinClassificationProject/main/output/output_128_0.png" width=400>
+<img src= "https://raw.githubusercontent.com/seetarajpara/Module5_Capstone_ProteinClassificationProject/main/output/output_133_0.png" width=400>
+<img src= "https://raw.githubusercontent.com/seetarajpara/Module5_Capstone_ProteinClassificationProject/main/output/output_133_1.png" width=400>
+<img src= "https://raw.githubusercontent.com/seetarajpara/Module5_Capstone_ProteinClassificationProject/main/output/output_135_0.png" width=400>
 
 ```                               
                                precision    recall  f1-score   support
