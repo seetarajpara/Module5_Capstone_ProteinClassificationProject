@@ -1,8 +1,5 @@
-# Module5_Capstone_ProteinClassificationProject
-
-Deep learning project for protein classification.
-
 ## Protein Classification Problem
+Deep learning project for protein classification.
 
 ### Background Research
 - Proteins are macromolecules responsible for all biological processes in living cells
